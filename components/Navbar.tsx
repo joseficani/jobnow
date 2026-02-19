@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -11,7 +10,7 @@ export default function Navbar() {
     <header className="bg-white">
       <div className="grid w-full md:grid-cols-2">
         <div className="bg-[var(--left)]">
-          <div className="px-6 py-6 md:px-24">
+          <div className="mx-auto w-full max-w-[1200px] px-6 py-6 md:px-24">
             <div className="hidden md:flex items-center gap-10">
               <div className="text-2xl font-extrabold tracking-tight">
                 Job
@@ -30,6 +29,7 @@ export default function Navbar() {
                   w
                 </span>
               </div>
+
               <nav className="hidden md:flex gap-12 text-sm font-bold">
                 <a href="#">Home</a>
                 <a href="#">Job</a>
@@ -57,6 +57,7 @@ export default function Navbar() {
                   </span>
                 </div>
               </div>
+
               <div className="absolute right-0 top-1/2 -translate-y-1/2">
                 <button
                   onClick={() => setOpen((v) => !v)}
@@ -69,21 +70,25 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className="bg-[var(--brand)] hidden md:block">
-          <div className="hidden md:flex items-center justify-end gap-6 px-10 py-6 md:px-16">
-            <a href="#" className="text-sm font-bold text-white">
-              Sign In
-            </a>
 
-            <a
-              href="#"
-              className="rounded-xl bg-white px-4 py-2 text-sm font-bold text-[var(--text)] shadow"
-            >
-              Create Account
-            </a>
+        <div className="bg-[var(--brand)] hidden md:block">
+          <div className="mx-auto w-full max-w-[1200px] px-6 py-6 md:px-24">
+            <div className="hidden md:flex items-center justify-end gap-6">
+              <a href="#" className="text-sm font-bold text-white">
+                Sign In
+              </a>
+
+              <a
+                href="#"
+                className="rounded-xl bg-white px-5 py-2 text-sm font-bold text-[var(--text)] shadow"
+              >
+                Create Account
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
       {open && (
         <div className="md:hidden bg-[var(--left)] px-6 pb-5">
           <nav className="flex flex-col gap-3 text-sm font-bold">
