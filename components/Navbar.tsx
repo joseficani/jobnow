@@ -8,11 +8,6 @@ export default function Navbar() {
 
   return (
     <header className="relative w-full">
-      <div className="absolute inset-0 hidden md:grid md:grid-cols-2">
-        <div className="bg-[var(--left)]" />
-        <div className="bg-[var(--brand)]" />
-      </div>
-
       <div className="relative bg-[var(--left)] md:bg-transparent">
         <div className="container mx-auto px-6 md:px-12 py-5">
           <div className="hidden md:grid md:grid-cols-2 items-center">
