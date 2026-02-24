@@ -12,10 +12,11 @@ export default function Navbar() {
         <div className="bg-[var(--left)]" />
         <div className="bg-[var(--brand)]" />
       </div>
+
       <div className="relative bg-[var(--left)] md:bg-transparent">
-        <div className="mx-auto max-w-[1200px] px-6 md:px-12 py-5">
+        <div className="container mx-auto px-6 md:px-12 py-5">
           <div className="hidden md:grid md:grid-cols-2 items-center">
-            <div className="flex items-center lg:-ml-12">
+            <div className="flex items-center lg:-ml-10">
               <div className="text-2xl font-extrabold tracking-tight leading-none">
                 Job
                 <span className="text-[var(--brand)] inline-flex items-baseline">
@@ -55,6 +56,7 @@ export default function Navbar() {
               </a>
             </div>
           </div>
+
           <div className="relative md:hidden h-[70px]">
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="text-3xl font-extrabold tracking-tight">
@@ -91,7 +93,7 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden bg-[var(--left)]">
-          <div className="mx-auto max-w-[1200px] px-6 pb-5">
+          <div className="container mx-auto px-6 pb-5">
             <nav className="flex flex-col gap-3 text-sm font-bold">
               <a href="#">Home</a>
               <a href="#">Job</a>
