@@ -87,24 +87,51 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-[var(--left)]">
-          <div className="container mx-auto px-6 pb-5">
-            <nav className="flex flex-col gap-3 text-sm font-bold">
-              <a href="#">Home</a>
-              <a href="#">Job</a>
-              <a href="#">About Us</a>
-              <a href="#">Contact</a>
-              <hr className="my-2 opacity-20" />
-              <a href="#" className="font-bold">
-                Sign In
-              </a>
-              <a
-                href="#"
-                className="w-fit rounded-xl bg-white px-4 py-2 text-sm font-bold text-[var(--text)] shadow"
-              >
-                Create Account
-              </a>
-            </nav>
+        <div className="fixed inset-0 z-[9999] md:hidden">
+          <button
+            className="absolute inset-0 bg-black/20"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          />
+
+          <div className="relative bg-[var(--left)] shadow-lg">
+            <div className="container mx-auto px-6 pb-6 pt-6">
+              <div className="mb-4 flex justify-end">
+                <button
+                  onClick={() => setOpen(false)}
+                  className="grid h-10 w-10 place-items-center rounded-lg bg-white text-xl font-bold text-[var(--text)] shadow"
+                  aria-label="Close menu"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <nav className="flex flex-col gap-3 text-sm font-bold">
+                <a href="#" onClick={() => setOpen(false)}>
+                  Home
+                </a>
+                <a href="#" onClick={() => setOpen(false)}>
+                  Job
+                </a>
+                <a href="#" onClick={() => setOpen(false)}>
+                  About Us
+                </a>
+                <a href="#" onClick={() => setOpen(false)}>
+                  Contact
+                </a>
+                <hr className="my-2 opacity-20" />
+                <a href="#" className="font-bold" onClick={() => setOpen(false)}>
+                  Sign In
+                </a>
+                <a
+                  href="#"
+                  className="w-fit rounded-xl bg-white px-4 py-2 text-sm font-bold text-[var(--text)] shadow"
+                  onClick={() => setOpen(false)}
+                >
+                  Create Account
+                </a>
+              </nav>
+            </div>
           </div>
         </div>
       )}

@@ -77,7 +77,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative bg-[var(--brand)] -mx-6 md:mx-0 md:rounded-bl-[120px]">
+         <div className="relative bg-[var(--brand)] -mx-6 md:mx-0 md:rounded-bl-[180px] md:overflow-hidden">
             <div className="px-6 md:px-12 h-full">
               <div className="relative h-[420px] sm:h-[460px] md:h-full pt-6 md:pt-10">
                 <div className="relative h-full">
