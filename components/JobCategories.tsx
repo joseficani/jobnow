@@ -1,16 +1,15 @@
-import Image from "next/image";
+"use client";
 
-const CARD_W = 285;
-const GAP = 24;
-const PEEK = 0.3;
-const extraPeekPx = GAP + Math.round(CARD_W * PEEK);
+import Image from "next/image";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const categories = [
   {
     title: "Design and\nDevelopment",
     jobs: "350 Job Vacancy",
     icon: "/images/cat-design.png",
-    active: true,
   },
   {
     title: "Accounting and\nFinance",
@@ -34,24 +33,33 @@ const categories = [
   },
 ];
 
+const ICON_WHITE = "brightness-0 invert";
+
 function CategoryCard({
   title,
   jobs,
   icon,
-  active,
+  index,
+  activeIndex,
+  setActiveIndex,
 }: {
   title: string;
   jobs: string;
   icon: string;
-  active?: boolean;
+  index: number;
+  activeIndex: number;
+  setActiveIndex: (i: number) => void;
 }) {
+  const active = index === activeIndex;
+
   return (
     <div
+      onMouseEnter={() => setActiveIndex(index)}
       className={[
         "w-[285px] h-[248px] shrink-0 rounded-[20px] p-7",
         "shadow-[0_12px_30px_rgba(0,0,0,0.06)]",
         "transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.10)]",
-        active ? "bg-[var(--brand)]" : "bg-white",
+        active ? "bg-[var(--brand)] text-white" : "bg-white text-[var(--text)]",
       ].join(" ")}
     >
       <div className="h-[49px] w-[49px]">
@@ -60,20 +68,88 @@ function CategoryCard({
           alt=""
           width={49}
           height={49}
-          className={active ? "brightness-[10]" : ""}
+          className={[
+            "transition-all duration-300",
+            active ? ICON_WHITE : "", 
+          ].join(" ")}
+        />
+      </div>
+
+      <h3 className="mt-7 whitespace-pre-line text-[16px] font-extrabold leading-[1.25]">
+        {title}
+      </h3>
+
+      <p
+        className={[
+          "mt-10 text-[10px] font-medium whitespace-nowrap",
+          active ? "text-white/80" : "text-[var(--muted)]",
+        ].join(" ")}
+      >
+        {jobs}
+      </p>
+    </div>
+  );
+}
+
+function MobileCard({
+  title,
+  jobs,
+  icon,
+  index,
+  activeIndex,
+  setActiveIndex,
+}: {
+  title: string;
+  jobs: string;
+  icon: string;
+  index: number;
+  activeIndex: number;
+  setActiveIndex: (i: number) => void;
+}) {
+  const active = index === activeIndex;
+
+  return (
+    <div
+      onMouseEnter={() => setActiveIndex(index)}
+      onClick={() => setActiveIndex(index)}
+      className={[
+        "w-[106px] h-[93px] rounded-[7px]",
+        "shadow-[0_10px_26px_rgba(0,0,0,0.06)]",
+        "transition-all duration-300",
+        active ? "bg-[var(--brand)]" : "bg-white",
+      ].join(" ")}
+      style={{ padding: 10 }}
+    >
+      <div className="h-[18px] w-[18px]">
+        <Image
+          src={icon}
+          alt=""
+          width={18}
+          height={18}
+          className={[
+            "transition-all duration-300",
+            active ? ICON_WHITE : "",
+          ].join(" ")}
         />
       </div>
 
       <h3
         className={[
-          "mt-7 whitespace-pre-line text-[16px] font-extrabold leading-[1.25]",
+          "mt-[8px] whitespace-pre-line font-extrabold leading-[10px]",
+          "w-[56px] h-[21px] text-[7px]",
           active ? "text-white" : "text-[var(--text)]",
         ].join(" ")}
       >
         {title}
       </h3>
 
-      <p className={["mt-10 text-[10px] font-medium", active ? "text-white/80" : "text-[#9aa3ad]"].join(" ")}>
+      <p
+        className={[
+          "mt-[6px] font-medium leading-[5px]",
+          "text-[5px] whitespace-nowrap",
+          active ? "text-white/80" : "text-[var(--muted)]",
+        ].join(" ")}
+      >
         {jobs}
       </p>
     </div>
@@ -81,6 +157,8 @@ function CategoryCard({
 }
 
 export default function PopularJobCategories() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <section className="w-full overflow-x-hidden bg-[#eaf8f3]">
       <div className="container mx-auto px-6 py-14 md:px-12 md:py-20">
@@ -89,60 +167,44 @@ export default function PopularJobCategories() {
             Popular Job Categories
           </h2>
 
-          <p className="mx-auto mt-3 max-w-[280px] text-[8.5px] leading-[1.55] text-[#97a1ab] md:mt-4 md:max-w-[760px] md:text-[14px] md:leading-6">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod
-            vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.
+          <p className="mx-auto mt-3 max-w-[280px] text-[8.5px] leading-[1.55] text-[var(--muted)] md:mt-4 md:max-w-[760px] md:text-[14px] md:leading-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </div>
 
         <div className="mt-10 md:mt-14">
-          <div className="grid grid-cols-3 gap-4 md:hidden">
-            {categories.slice(0, 3).map((c) => (
-              <div
-                key={c.title}
-                className={[
-                  "rounded-[14px] p-4 shadow-[0_10px_26px_rgba(0,0,0,0.06)]",
-                  c.active ? "bg-[var(--brand)]" : "bg-white",
-                ].join(" ")}
-              >
-                <div className="h-[28px] w-[28px]">
-                  <Image
-                    src={c.icon}
-                    alt=""
-                    width={28}
-                    height={28}
-                    className={c.active ? "brightness-[10]" : ""}
-                  />
-                </div>
-
-                <h3
-                  className={[
-                    "mt-3 whitespace-pre-line text-[9.5px] font-extrabold leading-[1.25]",
-                    c.active ? "text-white" : "text-[var(--text)]",
-                  ].join(" ")}
-                >
-                  {c.title}
-                </h3>
-
-                <p className={["mt-3 text-[7px] font-medium", c.active ? "text-white/80" : "text-[#9aa3ad]"].join(" ")}>
-                  {c.jobs}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="hidden md:block">
-            <div className="overflow-hidden" style={{ width: `calc(100% + ${extraPeekPx}px)` }}>
-              <div className="flex gap-6">
-                {categories.map((c) => (
-                  <CategoryCard
-                    key={c.title}
+          <div className="md:hidden overflow-hidden">
+            <Swiper slidesPerView="auto" spaceBetween={16} grabCursor className="!overflow-visible">
+              {categories.map((c, i) => (
+                <SwiperSlide key={c.title} style={{ width: 106 }}>
+                  <MobileCard
                     title={c.title}
                     jobs={c.jobs}
                     icon={c.icon}
-                    active={c.active}
+                    index={i}
+                    activeIndex={activeIndex}
+                    setActiveIndex={setActiveIndex}
                   />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+          <div className="hidden md:block">
+            <div className="overflow-hidden -mr-[110px]">
+              <Swiper slidesPerView="auto" spaceBetween={24} grabCursor className="!overflow-visible">
+                {categories.map((c, i) => (
+                  <SwiperSlide key={c.title} style={{ width: 285 }}>
+                    <CategoryCard
+                      title={c.title}
+                      jobs={c.jobs}
+                      icon={c.icon}
+                      index={i}
+                      activeIndex={activeIndex}
+                      setActiveIndex={setActiveIndex}
+                    />
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
             </div>
           </div>
         </div>
@@ -153,9 +215,9 @@ export default function PopularJobCategories() {
             className="
               inline-flex items-center justify-center
               h-[32px] w-[105px] rounded-[8px]
-              border-2 border-[#00cc99] bg-transparent
-              text-[10px] font-bold text-[#00cc99]
-              transition-all duration-300 hover:bg-[#00cc99] hover:text-white hover:shadow-md
+              border-2 border-[var(--brand)] bg-transparent
+              text-[10px] font-bold text-[var(--brand)]
+              transition-all duration-300 hover:bg-[var(--brand)] hover:text-white hover:shadow-md
               md:h-[40px] md:w-[120px] md:rounded-[10px] md:text-[11px]
             "
           >
