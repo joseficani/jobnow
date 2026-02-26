@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import HelpSection from "@/components/HelpSection";
+import JobCategories from "@/components/JobCategories";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <section className="w-full bg-white">
         <HowItWorks />
         <HelpSection />
+        <JobCategories />
       </section>
     </main>
   );
