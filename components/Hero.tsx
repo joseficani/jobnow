@@ -2,22 +2,23 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="w-full overflow-hidden bg-[var(--left)] md:bg-transparent">
+    <section className="relative w-full overflow-hidden bg-[var(--left)] md:bg-[var(--left)]">
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block w-[46%] bg-[var(--brand)] rounded-bl-[140px]" />
+
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid min-h-[420px] w-full md:min-h-[520px] md:grid-cols-2">
-          <div className="relative bg-[var(--left)] md:bg-transparent">
-            <div className="h-full lg:-ml-10">
+        <div className="grid min-h-[420px] w-full md:min-h-[520px] md:grid-cols-[54%_46%]">
+          <div className="relative">
+            <div className="h-full">
               <div className="flex h-full flex-col justify-center pb-10 pt-10 md:pb-24 md:pt-20">
-                <div className="w-full max-w-[760px] text-center md:text-left">
-                  <h1 className="text-2xl font-extrabold text-[var(--text)] sm:text-3xl md:text-[50px] md:whitespace-nowrap">
+                <div className="w-full max-w-[760px] text-center md:max-w-none md:pr-12 md:text-left">
+                  <h1 className="text-2xl font-extrabold text-[var(--text)] sm:text-3xl md:text-[50px]">
                     Search, Find, &amp; Apply
                   </h1>
 
                   <p className="mt-6 text-lg leading-8 text-black md:text-xl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sed quis lacus non orci euismod vestibulum vitae ut ex.
-                    Quisque ut arcu at lectus tristique auctor sit amet at
-                    turpis.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non
+                    orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor
+                    sit amet at turpis.
                   </p>
 
                   <div className="mt-8">
@@ -76,27 +77,27 @@ export default function Hero() {
               </div>
             </div>
           </div>
+          <div className="relative">
+            <div className="relative -mx-6 bg-[var(--brand)] md:mx-0 md:bg-transparent">
+              <div className="relative h-[420px] sm:h-[460px] md:h-full">
+                <div className="absolute inset-0 md:hidden bg-[var(--brand)] rounded-bl-[140px]" />
 
-         <div className="relative bg-[var(--brand)] -mx-6 md:mx-0 md:rounded-bl-[180px] md:overflow-hidden">
-            <div className="px-6 md:px-12 h-full">
-              <div className="relative h-[420px] sm:h-[460px] md:h-full pt-6 md:pt-10">
                 <div className="relative h-full">
-                  <div className="absolute left-[38px] top-[40px] md:left-[80px] md:top-[60px] grid h-16 w-16 -rotate-6 place-items-center rounded-2xl bg-white shadow-sm">
+                  <div className="absolute left-[38px] top-[40px] md:left-[80px] md:top-[70px] grid h-16 w-16 -rotate-6 place-items-center rounded-2xl bg-white shadow-sm">
                     <Image src="/images/tile-search.png" alt="" width={34} height={34} />
                   </div>
 
-                  <div className="absolute right-[38px] top-[70px] md:right-[90px] md:top-[90px] grid h-16 w-16 rotate-6 place-items-center rounded-2xl bg-white shadow-sm">
+                  <div className="absolute right-[38px] top-[70px] md:right-[90px] md:top-[95px] grid h-16 w-16 rotate-6 place-items-center rounded-2xl bg-white shadow-sm">
                     <Image src="/images/tile-chart.png" alt="" width={34} height={34} />
                   </div>
 
-                  <div className="absolute left-[38px] top-[200px] md:left-[85px] md:top-[210px] grid h-16 w-16 -rotate-3 place-items-center rounded-2xl bg-white shadow-sm">
+                  <div className="absolute left-[38px] top-[200px] md:left-[85px] md:top-[230px] grid h-16 w-16 -rotate-3 place-items-center rounded-2xl bg-white shadow-sm">
                     <Image src="/images/tile-shield.png" alt="" width={34} height={34} />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

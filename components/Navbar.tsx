@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="relative bg-[var(--left)] md:bg-transparent">
         <div className="container mx-auto px-6 py-5 md:px-12">
           <div className="hidden items-center md:grid md:grid-cols-2">
-            <div className="flex items-center lg:-ml-10">
+            <div className="flex items-center">
               <div className="text-2xl font-extrabold leading-none tracking-tight">
                 Job
                 <span className="inline-flex items-baseline text-[var(--brand)]">
