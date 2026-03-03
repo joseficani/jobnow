@@ -158,20 +158,20 @@ export default function RecentlyAddedJobs() {
             grabCursor
             className="!overflow-visible"
             breakpoints={{
-              0: { slidesPerView: 2.15, spaceBetween: 14 },
-              420: { slidesPerView: 2.2, spaceBetween: 14 },
-              640: { slidesPerView: 2.35, spaceBetween: 16 },
-              768: { slidesPerView: 2.75, spaceBetween: 18 },
-              1024: { slidesPerView: 2.75, spaceBetween: 18 },
-              1280: { slidesPerView: 2.75, spaceBetween: 18 },
+                0: { slidesPerView: 1.75, spaceBetween: 14 },
+                420: { slidesPerView: 1.75, spaceBetween: 14 },
+                640: { slidesPerView: 2.0, spaceBetween: 16 },
+                768: { slidesPerView: 2.75, spaceBetween: 18 },
+                1024: { slidesPerView: 2.75, spaceBetween: 18 },
+                1280: { slidesPerView: 2.75, spaceBetween: 18 },
             }}
-          >
+            >
             {jobs.map((job) => (
-              <SwiperSlide key={job.title} className="h-auto">
+                <SwiperSlide key={job.title} className="h-auto">
                 <JobCard {...job} />
-              </SwiperSlide>
+                </SwiperSlide>
             ))}
-          </Swiper>
+            </Swiper>
         </div>
         <div className="mt-12 flex justify-center">
           <a

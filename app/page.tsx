@@ -4,6 +4,7 @@ import HowItWorks from "@/components/HowItWorks";
 import HelpSection from "@/components/HelpSection";
 import JobCategories from "@/components/JobCategories";
 import AddedJobs from "@/components/AddedJobs";
+import Feedback from "@/components/Feedback";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
         <HelpSection />
         <JobCategories />
         <AddedJobs/>
+        <Feedback/>
       </section>
     </main>
   );
