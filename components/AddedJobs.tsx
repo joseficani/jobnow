@@ -8,8 +8,7 @@ const jobs = [
   {
     title: "UI/UX Designer",
     company: "Dimension Studio",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.",
     location: "San Fransisco, CA",
     type: "Full Time",
     logo: "/images/job-1.png",
@@ -17,8 +16,7 @@ const jobs = [
   {
     title: "Full Stack Developer",
     company: "Alpander",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.",
     location: "San Fransisco, CA",
     type: "Full Time",
     logo: "/images/job-2.png",
@@ -26,11 +24,26 @@ const jobs = [
   {
     title: "Product Designer",
     company: "XReact Tech",
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.",
     location: "San Fransisco, CA",
     type: "Full Time",
     logo: "/images/job-3.png",
+  },
+  {
+    title: "Mobile Developer",
+    company: "Nova Apps",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.",
+    location: "San Fransisco, CA",
+    type: "Full Time",
+    logo: "/images/Job-4.png",
+  },
+  {
+    title: "Data Analyst",
+    company: "Insight Lab",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.",
+    location: "San Fransisco, CA",
+    type: "Full Time",
+    logo: "/images/Job-5.png",
   },
 ];
 
@@ -77,14 +90,15 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
   return (
     <div
       className="
-        flex flex-col bg-white
+        flex w-full flex-col bg-white
         shadow-[0_18px_45px_rgba(2,6,23,0.06)]
         transition-all duration-300 hover:-translate-y-1
         hover:shadow-[0_22px_55px_rgba(2,6,23,0.10)]
-        md:w-full md:h-[510px] md:rounded-[20px] md:px-10 md:py-10
-        w-[182px] h-[215px] rounded-[8px] px-[14px] py-[14px]
+        rounded-[8px] px-[14px] pt-[14px] pb-[18px]
+        md:rounded-[20px] md:px-10 md:pt-10 md:pb-12
       "
     >
+
       <div className="h-[40px] w-[40px] md:h-[78px] md:w-[78px]">
         <Image
           src={logo}
@@ -97,11 +111,9 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
       <h3 className="mt-3 text-[11px] font-extrabold text-[var(--text)] md:mt-6 md:text-[22px]">
         {title}
       </h3>
-
       <p className="mt-1 text-[7px] font-semibold text-[var(--muted)] md:mt-2 md:text-[13px]">
         {company}
       </p>
-
       <p className="mt-2 text-[6.6px] leading-[10.5px] text-[var(--muted)] md:mt-6 md:text-[13px] md:leading-6">
         {desc}
       </p>
@@ -118,7 +130,7 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
       </div>
       <a
         href="#"
-        className="mt-3 inline-flex items-center gap-2 text-[7px] font-extrabold text-[var(--brand)] md:mt-6 md:text-[15px]"
+        className="mt-4 inline-flex items-center gap-2 text-[7px] font-extrabold text-[var(--brand)] md:mt-6 md:text-[15px]"
       >
         Apply Now
         <span className="text-[10px] leading-none md:text-[18px]">›</span>
@@ -137,7 +149,8 @@ export default function RecentlyAddedJobs() {
           </h2>
 
           <p className="mx-auto mt-3 max-w-[720px] text-[12px] leading-6 text-[var(--muted)] md:text-[14px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.Sed quis lacus non orci euismod vestiblium vita at ex.Quiaque ut arcu at letus tristique auctor sit amet at turpis.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod
+            vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.
           </p>
         </div>
         <div className="mt-12">
@@ -147,16 +160,14 @@ export default function RecentlyAddedJobs() {
             breakpoints={{
               0: { slidesPerView: 2.15, spaceBetween: 14 },
               420: { slidesPerView: 2.2, spaceBetween: 14 },
-              640: { slidesPerView: 2.5, spaceBetween: 16 },
-              1024: { slidesPerView: "auto", spaceBetween: 18 },
-              1280: { slidesPerView: "auto", spaceBetween: 18 },
+              640: { slidesPerView: 2.35, spaceBetween: 16 },
+              768: { slidesPerView: 2.75, spaceBetween: 18 },
+              1024: { slidesPerView: 2.75, spaceBetween: 18 },
+              1280: { slidesPerView: 2.75, spaceBetween: 18 },
             }}
           >
             {jobs.map((job) => (
-              <SwiperSlide
-                key={job.title}
-                className="!w-[182px] md:!w-[446px]"
-              >
+              <SwiperSlide key={job.title} className="h-auto">
                 <JobCard {...job} />
               </SwiperSlide>
             ))}
