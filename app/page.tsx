@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import HelpSection from "@/components/HelpSection";
 import JobCategories from "@/components/JobCategories";
+import AddedJobs from "@/components/AddedJobs";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
         <HowItWorks />
         <HelpSection />
         <JobCategories />
+        <AddedJobs/>
       </section>
     </main>
   );
