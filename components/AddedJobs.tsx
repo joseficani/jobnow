@@ -138,7 +138,6 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
     </div>
   );
 }
-
 export default function RecentlyAddedJobs() {
   return (
     <section className="w-full overflow-x-hidden bg-white">
