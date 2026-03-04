@@ -9,10 +9,13 @@ export default function FooterWithCta() {
         <div className="relative -top-[64px] md:-top-[90px]">
           <div
             className="
-              mx-auto w-full
-              rounded-[20px] bg-[#003a2c]
+              mx-auto
+              w-full
+              max-w-[1240px]
+              rounded-[20px]
+              bg-[#003a2c]
               px-6 py-10
-              md:h-[322px] md:w-[1240px] md:px-12 md:py-0
+              md:px-12 md:py-16
               flex flex-col items-center justify-center text-center
             "
           >
@@ -25,16 +28,18 @@ export default function FooterWithCta() {
               lacus non orci euismod vestibulum vitae ut ex.
             </p>
 
-            <button className="mt-6 h-[42px] px-8 rounded-[8px] border border-white text-white text-[12px] font-bold">
+            <a
+              href="#"
+              className="mt-6 inline-flex h-[42px] items-center justify-center px-8 rounded-[8px] border border-white text-white text-[12px] font-bold"
+            >
               Register Now
-            </button>
+            </a>
           </div>
         </div>
         <div className="pb-14 md:pb-20">
           <div className="hidden md:grid md:grid-cols-12 md:items-start">
             <div className="col-span-4 pt-6">
               <div className="flex items-center leading-none">
-
                 <span className="text-[44px] font-extrabold text-black">
                   Job
                 </span>
@@ -52,23 +57,19 @@ export default function FooterWithCta() {
                   priority
                 />
 
-                <span className="text-[44px] font-extrabold text-white">
-                  w
-                </span>
-
+                <span className="text-[44px] font-extrabold text-white">w</span>
               </div>
 
               <p className="mt-4 max-w-[280px] text-[12px] leading-6 text-white/80">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 consequat facilisis nibh vel faucibus.
               </p>
-
             </div>
             <div className="col-span-3">
               <h3 className="text-[16px] font-extrabold text-white">Company</h3>
-              <div className="mt-4 text-[12px] leading-5 text-white/80 md:space-y-2">
-                <p>Address : 123 Fifth Avenue, New York</p>
-                <p>- 1060, USA</p>
+
+              <div className="mt-4 text-[12px] leading-5 md:leading-6 text-white/80 md:space-y-2">
+                <p>Address : 123 Fifth Avenue, New York - 1060, USA</p>
                 <p>Call Us : + (100) 456 7890</p>
                 <p>Email : youid@example.com</p>
                 <p>Mon Sat : 9:00 AM - 19:00 PM</p>
@@ -79,30 +80,86 @@ export default function FooterWithCta() {
               <h3 className="text-[16px] font-extrabold text-white">Pages</h3>
 
               <ul className="mt-4 space-y-2 text-[12px] text-white/80">
-                <li className="flex items-center gap-2"><span>›</span> Home</li>
-                <li className="flex items-center gap-2"><span>›</span> Booking</li>
-                <li className="flex items-center gap-2"><span>›</span> Facilities</li>
-                <li className="flex items-center gap-2"><span>›</span> About Us</li>
-                <li className="flex items-center gap-2"><span>›</span> Location</li>
-                <li className="flex items-center gap-2"><span>›</span> Contact</li>
+                <li>
+                  <a href="#" className="flex items-center gap-2 hover:text-white">
+                    <span>›</span> Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex items-center gap-2 hover:text-white">
+                    <span>›</span> Booking
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex items-center gap-2 hover:text-white">
+                    <span>›</span> Facilities
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex items-center gap-2 hover:text-white">
+                    <span>›</span> About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex items-center gap-2 hover:text-white">
+                    <span>›</span> Location
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex items-center gap-2 hover:text-white">
+                    <span>›</span> Contact
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="col-span-2">
-              <h3 className="text-[16px] font-extrabold text-white">Contact Us</h3>
+              <h3 className="text-[16px] font-extrabold text-white">
+                Contact Us
+              </h3>
 
               <div className="mt-4 flex items-center gap-4">
-                <Image src="/images/social-google.png" alt="Google" width={20} height={20}/>
-                <Image src="/images/social-facebook.png" alt="Facebook" width={20} height={20}/>
-                <Image src="/images/social-twitter.png" alt="Twitter" width={20} height={20}/>
-                <Image src="/images/social-linkedin.png" alt="LinkedIn" width={20} height={20}/>
+                <a href="https://www.google.com" target="_blank" rel="noreferrer">
+                  <Image
+                    src="/images/social-google.png"
+                    alt="Google"
+                    width={20}
+                    height={20}
+                    className="hover:opacity-90"
+                  />
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                  <Image
+                    src="/images/social-facebook.png"
+                    alt="Facebook"
+                    width={20}
+                    height={20}
+                    className="hover:opacity-90"
+                  />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                  <Image
+                    src="/images/social-twitter.png"
+                    alt="Twitter"
+                    width={20}
+                    height={20}
+                    className="hover:opacity-90"
+                  />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                  <Image
+                    src="/images/social-linkedin.png"
+                    alt="LinkedIn"
+                    width={20}
+                    height={20}
+                    className="hover:opacity-90"
+                  />
+                </a>
               </div>
             </div>
-
           </div>
           <div className="md:hidden">
             <div className="pt-2">
               <div className="flex items-center leading-none">
-
                 <span className="text-[44px] font-extrabold text-black">
                   Job
                 </span>
@@ -120,10 +177,7 @@ export default function FooterWithCta() {
                   priority
                 />
 
-                <span className="text-[44px] font-extrabold text-white">
-                  w
-                </span>
-
+                <span className="text-[44px] font-extrabold text-white">w</span>
               </div>
 
               <p className="mt-4 max-w-[260px] text-[12px] leading-6 text-white/80">
@@ -134,6 +188,7 @@ export default function FooterWithCta() {
             <div className="mt-10 grid grid-cols-2 gap-x-10">
               <div>
                 <h3 className="text-[16px] font-extrabold text-white">Company</h3>
+
                 <div className="mt-4 text-[12px] leading-5 text-white/80">
                   <p>Address : 123 Fifth Avenue, New York - 1060, USA</p>
                   <p>Call Us : + (100) 456 7890</p>
@@ -141,33 +196,87 @@ export default function FooterWithCta() {
                   <p>Mon Sat : 9:00 AM - 19:00 PM</p>
                 </div>
               </div>
+
               <div>
                 <h3 className="text-[16px] font-extrabold text-white">Pages</h3>
 
                 <ul className="mt-4 space-y-2 text-[12px] text-white/80">
-                  <li className="flex items-center gap-2"><span>›</span> Home</li>
-                  <li className="flex items-center gap-2"><span>›</span> Booking</li>
-                  <li className="flex items-center gap-2"><span>›</span> Facilities</li>
-                  <li className="flex items-center gap-2"><span>›</span> About Us</li>
-                  <li className="flex items-center gap-2"><span>›</span> Location</li>
-                  <li className="flex items-center gap-2"><span>›</span> Contact</li>
+                  <li>
+                    <a href="#" className="flex items-center gap-2 hover:text-white">
+                      <span>›</span> Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="flex items-center gap-2 hover:text-white">
+                      <span>›</span> Booking
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="flex items-center gap-2 hover:text-white">
+                      <span>›</span> Facilities
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="flex items-center gap-2 hover:text-white">
+                      <span>›</span> About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="flex items-center gap-2 hover:text-white">
+                      <span>›</span> Location
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="flex items-center gap-2 hover:text-white">
+                      <span>›</span> Contact
+                    </a>
+                  </li>
                 </ul>
               </div>
-
             </div>
             <div className="mt-10">
               <h3 className="text-[16px] font-extrabold text-white">Contact Us</h3>
 
               <div className="mt-4 flex items-center gap-4">
-                <Image src="/images/social-google.png" alt="Google" width={20} height={20}/>
-                <Image src="/images/social-facebook.png" alt="Facebook" width={20} height={20}/>
-                <Image src="/images/social-twitter.png" alt="Twitter" width={20} height={20}/>
-                <Image src="/images/social-linkedin.png" alt="LinkedIn" width={20} height={20}/>
+                <a href="https://www.google.com" target="_blank" rel="noreferrer">
+                  <Image
+                    src="/images/social-google.png"
+                    alt="Google"
+                    width={20}
+                    height={20}
+                    className="hover:opacity-90"
+                  />
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                  <Image
+                    src="/images/social-facebook.png"
+                    alt="Facebook"
+                    width={20}
+                    height={20}
+                    className="hover:opacity-90"
+                  />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                  <Image
+                    src="/images/social-twitter.png"
+                    alt="Twitter"
+                    width={20}
+                    height={20}
+                    className="hover:opacity-90"
+                  />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                  <Image
+                    src="/images/social-linkedin.png"
+                    alt="LinkedIn"
+                    width={20}
+                    height={20}
+                    className="hover:opacity-90"
+                  />
+                </a>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
