@@ -69,11 +69,7 @@ export default function PeopleFeedback() {
   return (
     <section className="w-full bg-white overflow-x-hidden">
       <div className="container mx-auto px-6 py-14 md:px-12 md:py-24">
-
-        {/* ✅ GRID 3 COLS */}
         <div className="grid items-start gap-6 md:grid-cols-3 md:gap-4">
-
-          {/* ✅ LEFT (2 COLS) */}
           <div className="text-center md:text-left md:col-span-2">
 
             <h2 className="font-extrabold text-[var(--text)] text-[18px] leading-[1.15] md:text-[34px] md:w-[657px] md:whitespace-nowrap">
@@ -84,13 +80,10 @@ export default function PeopleFeedback() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis
               lacus non orci euismod vestibulum vitae ut ex.
             </p>
-
-            {/* QUOTE */}
             <p className="mx-auto mt-6 max-w-[560px] text-[12px] font-extrabold leading-6 text-[var(--text)] md:mx-0 md:mt-10 md:max-w-[640px] md:text-[18px] md:leading-8">
               “{active.quote}”
             </p>
 
-            {/* DESKTOP INFO */}
             <div className="mt-10 hidden md:block">
               <p className="text-[14px] font-extrabold text-[var(--text)]">
                 {active.name}
@@ -105,8 +98,6 @@ export default function PeopleFeedback() {
                 <ArrowBtn variant="next" onClick={next} />
               </div>
             </div>
-
-            {/* MOBILE */}
             <div className="mt-14 flex flex-col items-center md:hidden">
 
               <div
@@ -128,8 +119,6 @@ export default function PeopleFeedback() {
               </div>
             </div>
           </div>
-
-          {/* ✅ RIGHT (1 COL) */}
           <div className="hidden md:flex justify-end">
 
             <div className="md:mt-[56px]">
