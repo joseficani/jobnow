@@ -107,15 +107,19 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
           className="h-full w-full object-contain"
         />
       </div>
+
       <h3 className="mt-3 text-[11px] font-extrabold text-[var(--text)] md:mt-6 md:text-[22px]">
         {title}
       </h3>
+
       <p className="mt-1 text-[7px] font-semibold text-[var(--muted)] md:mt-2 md:text-[13px]">
         {company}
       </p>
-    <p className="mt-2 text-[8px] leading-[13px] text-[var(--muted)] md:mt-6 md:text-[13.5px] md:leading-6">
+
+      <p className="mt-2 text-[8px] leading-[13px] text-[var(--muted)] md:mt-6 md:text-[13.5px] md:leading-6">
         {desc}
       </p>
+
       <div className="mt-3 flex items-center gap-2 whitespace-nowrap md:mt-6 md:flex-wrap md:gap-3">
         <span className="inline-flex items-center gap-1 rounded-[6px] bg-[#f3f4f6] px-2 py-[3px] text-[6px] font-extrabold text-[var(--text)] md:gap-2 md:rounded-[10px] md:px-4 md:py-2 md:text-[12px]">
           <PinIcon className="h-[10px] w-[10px] md:h-[16px] md:w-[16px]" />
@@ -127,6 +131,7 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
           {type}
         </span>
       </div>
+
       <a
         href="#"
         className="mt-4 inline-flex items-center gap-2 text-[10px] font-extrabold text-[var(--brand)] md:mt-6 md:text-[18px]"
@@ -134,7 +139,6 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
         Apply Now
         <span className="text-[14px] leading-none md:text-[20px]">›</span>
       </a>
-
     </div>
   );
 }
@@ -143,6 +147,7 @@ export default function RecentlyAddedJobs() {
   return (
     <section className="w-full overflow-x-hidden bg-white">
       <div className="container mx-auto px-6 py-16 md:px-12 md:py-24">
+        
         <div className="mx-auto text-center">
           <h2 className="text-[20px] font-extrabold text-[var(--text)] md:text-[34px]">
             Recently Added Jobs
@@ -153,6 +158,7 @@ export default function RecentlyAddedJobs() {
             vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.
           </p>
         </div>
+
         <div className="mt-12">
           <Swiper
             grabCursor
@@ -178,15 +184,17 @@ export default function RecentlyAddedJobs() {
             href="#"
             className="
               inline-flex items-center justify-center
-              h-[40px] w-[120px] rounded-[10px]
+              h-[40px] w-[120px] md:h-[52px] md:w-[170px]
+              rounded-[10px]
               border-2 border-[var(--brand)] bg-transparent
-              text-[11px] font-bold text-[var(--brand)]
+              text-[11px] md:text-[14px] font-bold text-[var(--brand)]
               transition-all duration-300 hover:bg-[var(--brand)] hover:text-white
             "
           >
             View More
           </a>
         </div>
+
       </div>
     </section>
   );
