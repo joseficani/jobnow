@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function FooterWithCta() {
   return (
-    <section className="w-full bg-[var(--brand)] mt-32 md:mt-40">
+    <section className="w-full bg-[var(--brand)] mt-48 md:mt-56">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="relative -top-[64px] md:-top-[90px]">
+       <div className="relative -top-[110px] md:-top-[160px]">
           <div
             className="
               mx-auto
