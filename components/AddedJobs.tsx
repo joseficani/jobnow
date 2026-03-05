@@ -98,7 +98,6 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
         md:rounded-[20px] md:px-10 md:pt-10 md:pb-12
       "
     >
-
       <div className="h-[40px] w-[40px] md:h-[78px] md:w-[78px]">
         <Image
           src={logo}
@@ -114,7 +113,7 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
       <p className="mt-1 text-[7px] font-semibold text-[var(--muted)] md:mt-2 md:text-[13px]">
         {company}
       </p>
-      <p className="mt-2 text-[6.6px] leading-[10.5px] text-[var(--muted)] md:mt-6 md:text-[13px] md:leading-6">
+    <p className="mt-2 text-[8px] leading-[13px] text-[var(--muted)] md:mt-6 md:text-[13.5px] md:leading-6">
         {desc}
       </p>
       <div className="mt-3 flex items-center gap-2 whitespace-nowrap md:mt-6 md:flex-wrap md:gap-3">
@@ -130,14 +129,16 @@ function JobCard({ title, company, desc, location, type, logo }: any) {
       </div>
       <a
         href="#"
-        className="mt-4 inline-flex items-center gap-2 text-[7px] font-extrabold text-[var(--brand)] md:mt-6 md:text-[15px]"
+        className="mt-4 inline-flex items-center gap-2 text-[10px] font-extrabold text-[var(--brand)] md:mt-6 md:text-[18px]"
       >
         Apply Now
-        <span className="text-[10px] leading-none md:text-[18px]">›</span>
+        <span className="text-[14px] leading-none md:text-[20px]">›</span>
       </a>
+
     </div>
   );
 }
+
 export default function RecentlyAddedJobs() {
   return (
     <section className="w-full overflow-x-hidden bg-white">
@@ -157,20 +158,20 @@ export default function RecentlyAddedJobs() {
             grabCursor
             className="!overflow-visible"
             breakpoints={{
-                0: { slidesPerView: 1.75, spaceBetween: 14 },
-                420: { slidesPerView: 1.75, spaceBetween: 14 },
-                640: { slidesPerView: 2.0, spaceBetween: 16 },
-                768: { slidesPerView: 2.75, spaceBetween: 18 },
-                1024: { slidesPerView: 2.75, spaceBetween: 18 },
-                1280: { slidesPerView: 2.75, spaceBetween: 18 },
+              0: { slidesPerView: 1.75, spaceBetween: 14 },
+              420: { slidesPerView: 1.75, spaceBetween: 14 },
+              640: { slidesPerView: 2.0, spaceBetween: 16 },
+              768: { slidesPerView: 2.75, spaceBetween: 18 },
+              1024: { slidesPerView: 2.75, spaceBetween: 18 },
+              1280: { slidesPerView: 2.75, spaceBetween: 18 },
             }}
-            >
+          >
             {jobs.map((job) => (
-                <SwiperSlide key={job.title} className="h-auto">
+              <SwiperSlide key={job.title} className="h-auto">
                 <JobCard {...job} />
-                </SwiperSlide>
+              </SwiperSlide>
             ))}
-            </Swiper>
+          </Swiper>
         </div>
         <div className="mt-12 flex justify-center">
           <a

@@ -26,7 +26,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="w-full bg-white">
-      <div className="container mx-auto px-12 py-16 md:py-24">
+     <div className="container mx-auto px-12 pt-28 pb-16 md:pt-36 md:pb-24">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-[640px] md:max-w-[720px]">
             <h2 className="text-[20px] font-extrabold leading-[1.1] text-[var(--text)] md:text-[46px] md:leading-[1.05]">
@@ -60,7 +60,7 @@ export default function HowItWorks() {
                 <Image src={s.icon} alt="" width={43} height={43} />
               </div>
 
-              <h3 className="mt-4 text-[12.5px] font-extrabold leading-4 text-[var(--text)] md:mt-5 md:text-base md:leading-5">
+              <h3 className="mt-4 text-[15px] font-extrabold leading-5 text-[var(--text)] md:mt-5 md:text-[20px] md:leading-6">
                 {s.title}
               </h3>
 
@@ -70,7 +70,6 @@ export default function HowItWorks() {
             </div>
           ))}
         </div>
-
         <div className="mt-10 flex justify-center md:hidden">
           <a
             href="#"

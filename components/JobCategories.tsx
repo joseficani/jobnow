@@ -54,7 +54,7 @@ function CategoryCard({
       <h3
         className={[
           "whitespace-pre-line font-extrabold",
-          "mt-[8px] text-[6.5px] leading-[10px]",
+          "mt-[4px] text-[6.5px] leading-[9px]",
           "md:mt-7 md:text-[18px] md:leading-[1.25]",
         ].join(" ")}
       >
@@ -63,7 +63,7 @@ function CategoryCard({
 
       <p
         className={[
-          "mt-auto font-medium whitespace-nowrap",
+          "mt-5 font-medium whitespace-nowrap",
           "text-[5px]",
           "md:text-[12px]",
           active ? "text-white/80" : "text-[var(--muted)]",
@@ -79,14 +79,13 @@ export default function PopularJobCategories() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="w-full overflow-x-hidden bg-[#eaf8f3]">
+    <section className="w-full overflow-x-hidden bg-[#00cc99]/[0.051]">
       <div className="container mx-auto px-6 py-14 md:px-12 md:py-20">
         <div className="mx-auto text-center">
-          <h2 className="text-[14px] font-extrabold leading-[1.2] text-[var(--text)] md:text-[44px] md:leading-[1.1]">
+          <h2 className="text-[20px] font-semibold leading-[1.25] text-[var(--text)] md:text-[42px] md:leading-[1.2]">
             Popular Job Categories
           </h2>
-
-          <p className="mx-auto mt-3 max-w-[280px] text-[8.5px] leading-[1.55] text-[var(--muted)] md:mt-4 md:max-w-[760px] md:text-[14px] md:leading-6">
+          <p className="mx-auto mt-4 max-w-[300px] text-[10px] leading-[1.6] text-[var(--muted)] md:mt-5 md:max-w-[760px] md:text-[18px] md:leading-8">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non orci euismod
             vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor sit amet at turpis.
           </p>
@@ -102,7 +101,7 @@ export default function PopularJobCategories() {
               breakpoints={{
                 768: {
                   slidesPerView: 4.2,
-                  spaceBetween: 24,
+                  spaceBetween: 36,
                 },
               }}
             >
@@ -120,17 +119,16 @@ export default function PopularJobCategories() {
             </Swiper>
           </div>
         </div>
-
-        <div className="mt-10 flex justify-center md:mt-12">
+        <div className="mt-0 flex justify-center md:mt-12">
           <a
             href="#"
             className="
               inline-flex items-center justify-center
-              h-[32px] w-[105px] rounded-[8px]
+              h-[40px] w-[140px] rounded-[10px]
               border-2 border-[var(--brand)] bg-transparent
-              text-[10px] font-bold text-[var(--brand)]
+              text-[13px] font-bold text-[var(--brand)]
               transition-all duration-300 hover:bg-[var(--brand)] hover:text-white hover:shadow-md
-              md:h-[40px] md:w-[120px] md:rounded-[10px] md:text-[11px]
+              md:h-[50px] md:w-[170px] md:text-[15px]
             "
           >
             View More

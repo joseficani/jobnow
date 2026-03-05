@@ -60,15 +60,15 @@ export default function FooterWithCta() {
                 <span className="text-[44px] font-extrabold text-white">w</span>
               </div>
 
-              <p className="mt-4 max-w-[280px] text-[12px] leading-6 text-white/80">
+              <p className="mt-3 max-w-[300px] text-[14px] leading-6 text-white/85">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 consequat facilisis nibh vel faucibus.
               </p>
             </div>
             <div className="col-span-3">
-              <h3 className="text-[16px] font-extrabold text-white">Company</h3>
+              <h3 className="text-[18px] font-extrabold text-white">Company</h3>
 
-              <div className="mt-4 text-[12px] leading-5 md:leading-6 text-white/80 md:space-y-2">
+             <div className="mt-3 text-[14px] leading-5 text-white/85 space-y-1">
                 <p>Address : 123 Fifth Avenue, New York - 1060, USA</p>
                 <p>Call Us : + (100) 456 7890</p>
                 <p>Email : youid@example.com</p>
@@ -77,9 +77,9 @@ export default function FooterWithCta() {
             </div>
             <div className="col-span-1" />
             <div className="col-span-2">
-              <h3 className="text-[16px] font-extrabold text-white">Pages</h3>
+              <h3 className="text-[18px] font-extrabold text-white">Pages</h3>
 
-              <ul className="mt-4 space-y-2 text-[12px] text-white/80">
+              <ul className="mt-3 space-y-1 text-[14px] text-white/85">
                 <li>
                   <a href="#" className="flex items-center gap-2 hover:text-white">
                     <span>›</span> Home
@@ -113,7 +113,7 @@ export default function FooterWithCta() {
               </ul>
             </div>
             <div className="col-span-2">
-              <h3 className="text-[16px] font-extrabold text-white">
+              <h3 className="text-[18px] font-extrabold text-white">
                 Contact Us
               </h3>
 
@@ -180,14 +180,14 @@ export default function FooterWithCta() {
                 <span className="text-[44px] font-extrabold text-white">w</span>
               </div>
 
-              <p className="mt-4 max-w-[260px] text-[12px] leading-6 text-white/80">
+             <p className="mt-4 max-w-[260px] text-[10px] leading-5 text-white/80">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 consequat facilisis nibh vel faucibus.
               </p>
             </div>
             <div className="mt-10 grid grid-cols-2 gap-x-10">
               <div>
-                <h3 className="text-[16px] font-extrabold text-white">Company</h3>
+                <h3 className="text-[18px] font-extrabold text-white">Company</h3>
 
                 <div className="mt-4 text-[12px] leading-5 text-white/80">
                   <p>Address : 123 Fifth Avenue, New York - 1060, USA</p>
@@ -198,9 +198,9 @@ export default function FooterWithCta() {
               </div>
 
               <div>
-                <h3 className="text-[16px] font-extrabold text-white">Pages</h3>
+                <h3 className="text-[18px] font-extrabold text-white">Pages</h3>
 
-                <ul className="mt-4 space-y-2 text-[12px] text-white/80">
+                <ul className="mt-3 space-y-1 text-[14px] text-white/85">
                   <li>
                     <a href="#" className="flex items-center gap-2 hover:text-white">
                       <span>›</span> Home
@@ -235,7 +235,7 @@ export default function FooterWithCta() {
               </div>
             </div>
             <div className="mt-10">
-              <h3 className="text-[16px] font-extrabold text-white">Contact Us</h3>
+              <h3 className="text-[18px] font-extrabold text-white">Contact Us</h3>
 
               <div className="mt-4 flex items-center gap-4">
                 <a href="https://www.google.com" target="_blank" rel="noreferrer">
@@ -273,6 +273,7 @@ export default function FooterWithCta() {
                     height={20}
                     className="hover:opacity-90"
                   />
+                
                 </a>
               </div>
             </div>

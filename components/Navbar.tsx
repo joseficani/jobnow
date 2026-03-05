@@ -13,8 +13,7 @@ export default function Navbar() {
     "relative text-white/90 transition-colors duration-200 hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-200 hover:after:w-full";
 
   const primaryBtnClass =
-    "rounded-xl bg-white px-5 py-2 text-sm font-bold text-[var(--text)] shadow transition-all duration-200 hover:-translate-y-[1px] hover:shadow-md active:translate-y-0";
-
+  "rounded-xl bg-white px-5 py-2 text-base font-bold text-[var(--text)] shadow transition-all duration-200 hover:-translate-y-[1px] hover:shadow-md active:translate-y-0";
   const mobileMenuLinkClass =
     "w-fit text-[var(--text)] transition-colors duration-200 hover:text-[var(--brand)]";
 
@@ -22,12 +21,14 @@ export default function Navbar() {
     "grid h-12 w-12 place-items-center rounded-xl bg-[var(--brand)] text-white shadow-md transition-all duration-200 hover:brightness-95 hover:shadow-lg active:scale-[0.98]";
 
   return (
-    <header className="relative w-full">
-      <div className="relative bg-[var(--left)] md:bg-transparent">
+    <header className="relative w-full overflow-hidden bg-[var(--left)]">
+  <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block w-[44%] bg-[var(--brand)]" />
+
+  <div className="relative">
         <div className="container mx-auto px-6 py-5 md:px-12">
           <div className="hidden items-center md:grid md:grid-cols-2">
             <div className="flex items-center">
-              <div className="text-2xl font-extrabold leading-none tracking-tight">
+             <div className="text-3xl font-extrabold leading-none tracking-tight">
                 Job
                 <span className="inline-flex items-baseline text-[var(--brand)]">
                   N
@@ -45,7 +46,7 @@ export default function Navbar() {
                 </span>
               </div>
 
-              <nav className="ml-16 flex items-center gap-12 text-sm font-bold">
+              <nav className="ml-16 flex items-center gap-12 text-lg font-bold">
                 <a href="#" className={navLinkClass}>
                   Home
                 </a>
@@ -62,12 +63,19 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center justify-end gap-12">
-              <a href="#" className={`text-sm font-bold ${navLinkWhiteClass}`}>
+              <a href="#" className={`text-base font-bold ${navLinkWhiteClass}`}>
                 Sign In
               </a>
-
               <a href="#" className={primaryBtnClass}>
-                Create Account
+                <span className="flex items-center gap-2">
+                  <Image
+                    src="/images/create-account-icon.png"
+                    alt="Create account icon"
+                    width={16}
+                    height={16}
+                  />
+                  Create Account
+                </span>
               </a>
             </div>
           </div>
@@ -174,7 +182,15 @@ export default function Navbar() {
                   )}`}
                   onClick={() => setOpen(false)}
                 >
-                  Create Account
+                  <span className="flex items-center gap-2">
+                    <Image
+                      src="/images/create-account-icon.png"
+                      alt="Create account icon"
+                      width={16}
+                      height={16}
+                    />
+                    Create Account
+                  </span>
                 </a>
               </nav>
             </div>
