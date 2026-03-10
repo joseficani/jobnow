@@ -10,9 +10,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "JobNow",
   description: "Search, Find, & Apply",
+  icons: {
+    icon: "/images/fav-star.ico",
+    // shortcut: "/images/fav-star.ico",
+    // apple: "/images/fav-star.ico",
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
