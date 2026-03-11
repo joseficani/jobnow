@@ -22,103 +22,102 @@ export default function Navbar() {
     "grid h-12 w-12 place-items-center rounded-xl bg-[var(--brand)] text-white shadow-md transition-all duration-200 hover:brightness-95 hover:shadow-lg active:scale-[0.98]";
 
   return (
-    <header className="relative w-full overflow-hidden bg-[var(--left)]">
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block md:w-[44%] bg-[var(--brand)] z-0" />
-
-      <div className="relative z-10">
-        <div className="container mx-auto px-6 py-5 md:px-8 lg:px-10 xl:px-12">
-          <div className="hidden items-center md:grid md:grid-cols-2">
-            <div className="flex items-center">
-              <div className="text-[30px] font-extrabold leading-none tracking-tight lg:text-[32px] xl:text-3xl">
-                Job
-                <span className="inline-flex items-baseline text-[var(--brand)]">
-                  N
-                  <span className="mx-[2px] inline-flex items-center justify-center">
-                    <Image
-                      src="/images/search-o.png"
-                      alt="Search icon"
-                      width={16}
-                      height={16}
-                      className="relative top-[1px]"
-                      priority
-                    />
-                  </span>
-                  w
-                </span>
-              </div>
-
-              <nav className="ml-8 flex items-center gap-4 whitespace-nowrap font-bold md:ml-10 md:text-[12px] lg:ml-14 lg:gap-6 lg:text-[14px] xl:ml-20 xl:gap-8 xl:text-[17px]">
-                <a href="#" className={navLinkClass}>
-                  Home
-                </a>
-                <a href="#" className={navLinkClass}>
-                  Job
-                </a>
-                <a href="#" className={navLinkClass}>
-                  About Us
-                </a>
-                <a href="#" className={navLinkClass}>
-                  Contact
-                </a>
-              </nav>
-            </div>
-            <div className="flex items-center justify-end gap-4 pl-3 md:gap-5 lg:gap-8 lg:pl-4 xl:gap-10">
-              <a
-                href="#"
-                className={`font-bold whitespace-nowrap md:text-[12px] lg:text-[15px] xl:text-base ${navLinkWhiteClass}`}
-              >
-                Sign In
-              </a>
-
-              <a
-                href="#"
-                className={`${primaryBtnClass} md:px-3 md:py-[10px] md:text-[12px] lg:px-4 lg:text-[14px] xl:px-5 xl:text-base`}
-              >
-                <span className="flex items-center gap-2 whitespace-nowrap">
+    <header className="w-full overflow-hidden">
+      <div className="container mx-auto px-6 py-5 md:px-8 lg:px-10 xl:px-12">
+        <div className="hidden items-center md:grid md:grid-cols-[56%_44%]">
+          <div className="flex min-w-0 items-center bg-[var(--left)]">
+            <div className="shrink-0 text-[30px] font-extrabold leading-none tracking-tight text-[var(--text)] lg:text-[32px] xl:text-3xl">
+              Job
+              <span className="inline-flex items-baseline text-[var(--brand)]">
+                N
+                <span className="mx-[2px] inline-flex items-center justify-center">
                   <Image
-                    src="/images/create-account-icon.png"
-                    alt="Create account icon"
+                    src="/images/search-o.png"
+                    alt="Search icon"
                     width={16}
                     height={16}
+                    className="relative top-[1px]"
+                    priority
                   />
-                  Create Account
                 </span>
-              </a>
-            </div>
-          </div>
-          <div className="relative h-[70px] md:hidden">
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="text-2xl font-extrabold tracking-tight">
-                Job
-                <span className="inline-flex items-baseline text-[var(--brand)]">
-                  N
-                  <span className="mx-[3px] inline-flex items-center justify-center">
-                    <Image
-                      src="/images/search-o.png"
-                      alt="Search icon"
-                      width={18}
-                      height={18}
-                      className="relative top-[1px]"
-                      priority
-                    />
-                  </span>
-                  w
-                </span>
-              </div>
+                w
+              </span>
             </div>
 
-            <div className="absolute right-0 top-1/2 -translate-y-1/2">
-              <button
-                onClick={() => setOpen((v) => !v)}
-                className={mobileBtnClass}
-                aria-label="Open menu"
-              >
-                ☰
-              </button>
+            <nav className="ml-6 flex items-center gap-4 whitespace-nowrap font-bold md:ml-8 md:text-[12px] lg:ml-10 lg:gap-5 lg:text-[14px] xl:ml-14 xl:gap-7 xl:text-[17px]">
+              <a href="#" className={navLinkClass}>
+                Home
+              </a>
+              <a href="#" className={navLinkClass}>
+                Job
+              </a>
+              <a href="#" className={navLinkClass}>
+                About Us
+              </a>
+              <a href="#" className={navLinkClass}>
+                Contact
+              </a>
+            </nav>
+          </div>
+
+          {/* RIGHT PART */}
+          <div className="flex min-w-0 items-center justify-end gap-3 bg-[var(--brand)] rounded-bl-[28px] pl-3 md:gap-4 lg:gap-6 lg:pl-4 xl:gap-8">
+            <a
+              href="#"
+              className={`shrink-0 font-bold whitespace-nowrap md:text-[12px] lg:text-[15px] xl:text-base ${navLinkWhiteClass}`}
+            >
+              Sign In
+            </a>
+
+            <a
+              href="#"
+              className={`${primaryBtnClass} shrink-0 whitespace-nowrap md:px-3 md:py-[10px] md:text-[12px] lg:px-4 lg:text-[14px] xl:px-5 xl:text-base`}
+            >
+              <span className="flex items-center gap-2 whitespace-nowrap">
+                <Image
+                  src="/images/create-account-icon.png"
+                  alt="Create account icon"
+                  width={16}
+                  height={16}
+                />
+                Create Account
+              </span>
+            </a>
+          </div>
+        </div>
+        <div className="relative h-[70px] md:hidden">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="text-2xl font-extrabold tracking-tight text-[var(--text)]">
+              Job
+              <span className="inline-flex items-baseline text-[var(--brand)]">
+                N
+                <span className="mx-[3px] inline-flex items-center justify-center">
+                  <Image
+                    src="/images/search-o.png"
+                    alt="Search icon"
+                    width={18}
+                    height={18}
+                    className="relative top-[1px]"
+                    priority
+                  />
+                </span>
+                w
+              </span>
             </div>
+          </div>
+
+          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className={mobileBtnClass}
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
           </div>
         </div>
       </div>
+
       {open && (
         <div className="fixed inset-0 z-[9999] md:hidden">
           <button
@@ -129,7 +128,7 @@ export default function Navbar() {
 
           <div className="relative h-screen w-screen bg-[var(--left)]">
             <div className="flex items-center justify-between px-6 py-5">
-              <div className="text-3xl font-extrabold tracking-tight">
+              <div className="text-3xl font-extrabold tracking-tight text-[var(--text)]">
                 Job
                 <span className="inline-flex items-baseline text-[var(--brand)]">
                   N

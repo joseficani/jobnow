@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="w-full overflow-hidden bg-[var(--left)] md:bg-[linear-gradient(to_right,var(--left)_56%,var(--brand)_56%)]">
+    <section className="w-full overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 lg:px-10 xl:px-12">
         <div className="grid min-h-[460px] w-full md:min-h-[580px] md:grid-cols-[56%_44%]">
           <div className="bg-[var(--left)]">
