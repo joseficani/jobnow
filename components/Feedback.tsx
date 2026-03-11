@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
 
@@ -42,6 +43,8 @@ function ArrowBtn({
       className={[
         "inline-flex items-center justify-center rounded-full transition-all duration-200",
         "h-[36px] w-[36px]",
+        "md:h-[30px] md:w-[30px]",
+        "lg:h-[36px] lg:w-[36px]",
         isNext ? "bg-[#00cc99]" : "bg-[#e5e7eb]",
       ].join(" ")}
     >
@@ -50,7 +53,7 @@ function ArrowBtn({
         alt=""
         width={16}
         height={16}
-        className="h-[16px] w-[16px]"
+        className="h-[16px] w-[16px] md:h-[13px] md:w-[13px] lg:h-[16px] lg:w-[16px]"
       />
     </button>
   );
@@ -63,32 +66,32 @@ export default function PeopleFeedback() {
   const prev = () =>
     setIndex((p) => (p - 1 + feedbacks.length) % feedbacks.length);
 
-  const next = () =>
-    setIndex((p) => (p + 1) % feedbacks.length);
+  const next = () => setIndex((p) => (p + 1) % feedbacks.length);
 
   return (
     <section className="w-full bg-white overflow-x-hidden">
       <div className="container mx-auto px-6 py-14 md:px-12 md:py-24">
-
         <div className="grid items-start gap-6 md:grid-cols-3 md:gap-4">
-
           <div className="text-center md:text-left md:col-span-2">
-            <h2 className="font-extrabold text-[var(--text)] text-[22px] leading-[1.2] md:text-[36px] md:w-[657px] md:whitespace-nowrap">
+            <h2 className="font-extrabold text-[var(--text)] text-[22px] leading-[1.2] md:text-[26px] lg:text-[36px]">
               People’s Feedback about JobNow!
             </h2>
-            <p className="mx-auto mt-4 max-w-[520px] text-[16px] leading-7 text-[var(--muted)] md:mx-0 md:mt-5 md:max-w-[640px] md:text-[20px] md:leading-8">
+
+            <p className="mt-4 max-w-[520px] text-[16px] leading-7 text-[var(--muted)] md:mt-5 md:mx-0 md:max-w-[520px] md:text-[10px] md:leading-6 lg:max-w-[640px] lg:text-[20px] lg:leading-8">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis
               lacus non orci euismod vestibulum vitae ut ex.
             </p>
-            <p className="mx-auto mt-6 max-w-[560px] text-[14px] font-extrabold leading-7 text-[var(--text)] md:mx-0 md:mt-10 md:max-w-[640px] md:text-[20px] md:leading-9">
+
+            <p className="mt-6 max-w-[560px] text-[14px] font-extrabold leading-7 text-[var(--text)] md:mx-0 md:max-w-[560px] md:text-[10px] md:leading-6 lg:max-w-[640px] lg:text-[20px] lg:leading-9">
               “{active.quote}”
             </p>
+
             <div className="mt-10 hidden md:block">
-              <p className="text-[18px] font-extrabold text-[var(--text)]">
+              <p className="text-[18px] font-extrabold text-[var(--text)] md:text-[15px] lg:text-[18px]">
                 {active.name}
               </p>
 
-              <p className="mt-1 text-[14px] text-[var(--muted)]">
+              <p className="mt-1 text-[14px] text-[var(--muted)] md:text-[12px] lg:text-[14px]">
                 {active.role}
               </p>
 
@@ -96,10 +99,9 @@ export default function PeopleFeedback() {
                 <ArrowBtn variant="prev" onClick={prev} />
                 <ArrowBtn variant="next" onClick={next} />
               </div>
-
             </div>
-            <div className="mt-14 flex flex-col items-center md:hidden">
 
+            <div className="mt-14 flex flex-col items-center md:hidden">
               <div
                 className="mt-6 h-[183px] w-[187px] rounded-[8px]"
                 style={{ backgroundColor: active.color }}
@@ -117,14 +119,17 @@ export default function PeopleFeedback() {
                 <ArrowBtn variant="prev" onClick={prev} />
                 <ArrowBtn variant="next" onClick={next} />
               </div>
-
             </div>
-
           </div>
           <div className="hidden md:flex justify-end">
             <div className="md:mt-[56px]">
               <div
-                className="h-[474px] w-[484px] rounded-[20px]"
+                className="
+                  md:h-[260px] md:w-[220px]
+                  lg:h-[300px] lg:w-[300px]
+                  xl:h-[400px] xl:w-[410px]
+                  rounded-[20px]
+                "
                 style={{ backgroundColor: active.color }}
               />
             </div>

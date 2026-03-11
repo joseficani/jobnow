@@ -23,13 +23,13 @@ export default function Navbar() {
 
   return (
     <header className="relative w-full overflow-hidden bg-[var(--left)]">
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block w-[44%] bg-[var(--brand)]" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block md:w-[44%] lg:w-[44%] bg-[var(--brand)]" />
 
       <div className="relative">
-        <div className="container mx-auto px-6 py-5 md:px-12">
+        <div className="container mx-auto px-6 py-5 md:px-8 lg:px-10 xl:px-12">
           <div className="hidden items-center md:grid md:grid-cols-2">
-            <div className="flex items-center">
-              <div className="text-3xl font-extrabold leading-none tracking-tight">
+            <div className="flex items-center min-w-0">
+              <div className="shrink-0 text-[30px] lg:text-[32px] xl:text-3xl font-extrabold leading-none tracking-tight">
                 Job
                 <span className="inline-flex items-baseline text-[var(--brand)]">
                   N
@@ -47,7 +47,7 @@ export default function Navbar() {
                 </span>
               </div>
 
-              <nav className="ml-26 flex items-center gap-10 text-lg font-bold">
+              <nav className="ml-8 md:ml-10 lg:ml-14 xl:ml-20 flex items-center gap-4 md:text-[12px] lg:gap-6 lg:text-[14px] xl:gap-8 xl:text-[17px] font-bold whitespace-nowrap">
                 <a href="#" className={navLinkClass}>
                   Home
                 </a>
@@ -63,12 +63,19 @@ export default function Navbar() {
               </nav>
             </div>
 
-            <div className="flex items-center justify-end gap-12">
-              <a href="#" className={`text-base font-bold ${navLinkWhiteClass}`}>
+            <div className="flex items-center justify-end gap-4 md:gap-5 lg:gap-8 xl:gap-10 pl-3 lg:pl-4">
+              <a
+                href="#"
+                className={`font-bold whitespace-nowrap md:text-[12px] lg:text-[15px] xl:text-base ${navLinkWhiteClass}`}
+              >
                 Sign In
               </a>
-              <a href="#" className={primaryBtnClass}>
-                <span className="flex items-center gap-2">
+
+              <a
+                href="#"
+                className={`${primaryBtnClass} md:px-3 md:py-[10px] md:text-[12px] lg:px-4 lg:text-[14px] xl:px-5 xl:text-base`}
+              >
+                <span className="flex items-center gap-2 whitespace-nowrap">
                   <Image
                     src="/images/create-account-icon.png"
                     alt="Create account icon"
@@ -80,7 +87,6 @@ export default function Navbar() {
               </a>
             </div>
           </div>
-
           <div className="relative h-[70px] md:hidden">
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="text-3xl font-extrabold tracking-tight">
@@ -114,6 +120,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
       {open && (
         <div className="fixed inset-0 z-[9999] md:hidden">
           <button
@@ -121,6 +128,7 @@ export default function Navbar() {
             aria-label="Close menu"
             onClick={() => setOpen(false)}
           />
+
           <div className="relative h-screen w-screen bg-[var(--left)]">
             <div className="flex items-center justify-between px-6 py-5">
               <div className="text-3xl font-extrabold tracking-tight">
@@ -144,40 +152,35 @@ export default function Navbar() {
               <button
                 onClick={() => setOpen(false)}
                 className="grid h-11 w-11 place-items-center rounded-xl bg-white text-xl font-bold text-[var(--text)] shadow"
-                aria-label="Close menu"
               >
                 ✕
               </button>
             </div>
+
             <div className="px-6 pb-10 pt-2">
               <nav className="flex flex-col gap-4 text-[15px] font-bold">
-                <a href="#" className={mobileMenuLinkClass} onClick={() => setOpen(false)}>
+                <a href="#" className={mobileMenuLinkClass}>
                   Home
                 </a>
-                <a href="#" className={mobileMenuLinkClass} onClick={() => setOpen(false)}>
+                <a href="#" className={mobileMenuLinkClass}>
                   Job
                 </a>
-                <a href="#" className={mobileMenuLinkClass} onClick={() => setOpen(false)}>
+                <a href="#" className={mobileMenuLinkClass}>
                   About Us
                 </a>
-                <a href="#" className={mobileMenuLinkClass} onClick={() => setOpen(false)}>
+                <a href="#" className={mobileMenuLinkClass}>
                   Contact
                 </a>
 
                 <hr className="my-3 opacity-20" />
 
-                <a
-                  href="#"
-                  className={`${mobileMenuLinkClass} font-bold`}
-                  onClick={() => setOpen(false)}
-                >
+                <a href="#" className={`${mobileMenuLinkClass} font-bold`}>
                   Sign In
                 </a>
 
                 <a
                   href="#"
                   className={`w-fit ${primaryBtnClass.replace("px-5 py-2", "px-4 py-2")}`}
-                  onClick={() => setOpen(false)}
                 >
                   <span className="flex items-center gap-2">
                     <Image
