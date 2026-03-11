@@ -23,13 +23,13 @@ export default function Navbar() {
 
   return (
     <header className="relative w-full overflow-hidden bg-[var(--left)]">
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block md:w-[44%] lg:w-[44%] bg-[var(--brand)]" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block md:w-[44%] bg-[var(--brand)] z-0" />
 
-      <div className="relative">
+      <div className="relative z-10">
         <div className="container mx-auto px-6 py-5 md:px-8 lg:px-10 xl:px-12">
           <div className="hidden items-center md:grid md:grid-cols-2">
-            <div className="flex items-center min-w-0">
-              <div className="shrink-0 text-[30px] lg:text-[32px] xl:text-3xl font-extrabold leading-none tracking-tight">
+            <div className="flex items-center">
+              <div className="text-[30px] font-extrabold leading-none tracking-tight lg:text-[32px] xl:text-3xl">
                 Job
                 <span className="inline-flex items-baseline text-[var(--brand)]">
                   N
@@ -47,7 +47,7 @@ export default function Navbar() {
                 </span>
               </div>
 
-              <nav className="ml-8 md:ml-10 lg:ml-14 xl:ml-20 flex items-center gap-4 md:text-[12px] lg:gap-6 lg:text-[14px] xl:gap-8 xl:text-[17px] font-bold whitespace-nowrap">
+              <nav className="ml-8 flex items-center gap-4 whitespace-nowrap font-bold md:ml-10 md:text-[12px] lg:ml-14 lg:gap-6 lg:text-[14px] xl:ml-20 xl:gap-8 xl:text-[17px]">
                 <a href="#" className={navLinkClass}>
                   Home
                 </a>
@@ -62,8 +62,7 @@ export default function Navbar() {
                 </a>
               </nav>
             </div>
-
-            <div className="flex items-center justify-end gap-4 md:gap-5 lg:gap-8 xl:gap-10 pl-3 lg:pl-4">
+            <div className="flex items-center justify-end gap-4 pl-3 md:gap-5 lg:gap-8 lg:pl-4 xl:gap-10">
               <a
                 href="#"
                 className={`font-bold whitespace-nowrap md:text-[12px] lg:text-[15px] xl:text-base ${navLinkWhiteClass}`}
@@ -89,7 +88,7 @@ export default function Navbar() {
           </div>
           <div className="relative h-[70px] md:hidden">
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="text-3xl font-extrabold tracking-tight">
+              <div className="text-2xl font-extrabold tracking-tight">
                 Job
                 <span className="inline-flex items-baseline text-[var(--brand)]">
                   N
@@ -120,7 +119,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
       {open && (
         <div className="fixed inset-0 z-[9999] md:hidden">
           <button

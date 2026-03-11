@@ -1,156 +1,12 @@
-
-// import Image from "next/image";
-
-// export default function Hero() {
-//   return (
-//     <section className="relative w-full overflow-hidden bg-[var(--left)] md:bg-[var(--left)]">
-//       <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block w-[44%] bg-[var(--brand)] rounded-bl-[50px]" />
-
-//       <div className="container mx-auto px-6 md:px-12">
-//         <div className="grid min-h-[460px] w-full md:min-h-[580px] md:grid-cols-[56%_44%]">
-//           {/* LEFT SIDE */}
-//           <div className="relative">
-//             <div className="h-full">
-//               <div className="flex h-full flex-col justify-center pb-10 pt-10 md:pb-24 md:pt-20">
-//                 <div className="w-full max-w-[760px] text-center md:max-w-none md:pr-20 md:text-left">
-//                   <h1 className="text-2xl font-extrabold text-[var(--text)] sm:text-3xl md:text-[42px] lg:text-[40px] xl:text-[50px]">
-//                     Search, Find, &amp; Apply
-//                   </h1>
-
-//                   <p className="mt-6 text-[13px] leading-6 text-black sm:text-[15px] sm:leading-7 md:text-[16px] md:leading-7 lg:text-[18px] lg:leading-8 xl:text-xl xl:leading-8">
-//                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quis lacus non
-//                     orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor
-//                     sit amet at turpis.
-//                   </p>
-
-//                   {/* SEARCH BAR */}
-//                   <div className="mt-8">
-//                     <div
-//                       className="
-//                         mx-auto rounded-2xl bg-white p-3 shadow-md
-//                         md:mx-0 md:flex md:items-center md:rounded-[20px] md:py-0
-//                         md:h-[74px] lg:h-[80px] xl:h-[84px]
-//                        md:w-[430px] lg:w-[480px] xl:w-[560px]
-//                         md:gap-3 lg:gap-4
-//                         md:px-4 lg:px-5
-//                       "
-//                     >
-//                       <div className="flex w-full flex-nowrap items-center justify-center gap-3 md:justify-start md:gap-4">
-//                         {/* KEYWORD */}
-//                         <div
-//                           className="
-//                             flex h-[44px] min-w-0 flex-1 items-center gap-2 rounded-[10px] bg-[#f9f9f9] px-4
-//                             md:flex-none md:w-[170px]
-//                             lg:w-[200px]
-//                             xl:w-[240px]
-//                           "
-//                         >
-//                           <Image
-//                             src="/images/icon-search.png"
-//                             alt="Search"
-//                             width={18}
-//                             height={18}
-//                             className="shrink-0"
-//                           />
-//                           <input
-//                             className="w-full bg-transparent text-[13px] font-medium outline-none placeholder:text-[#7a7a7a]"
-//                             placeholder="Job title or Keyword"
-//                           />
-//                         </div>
-
-//                         {/* LOCATION */}
-//                         <div
-//                           className="
-//                             flex h-[44px] min-w-[120px] flex-1 items-center gap-2 rounded-[10px] bg-[#f9f9f9] px-4
-//                             md:flex-none md:w-[130px]
-//                             lg:w-[160px]
-//                             xl:w-[190px]
-//                           "
-//                         >
-//                           <Image
-//                             src="/images/icon-location.png"
-//                             alt="Location"
-//                             width={18}
-//                             height={18}
-//                             className="shrink-0"
-//                           />
-
-//                           <select
-//                             className="cursor-pointer appearance-none bg-transparent text-[13px] font-semibold outline-none"
-//                             defaultValue=""
-//                           >
-//                             <option value="" disabled>
-//                               Location
-//                             </option>
-//                             <option value="beirut">Beirut</option>
-//                             <option value="zahle">Zahle</option>
-//                             <option value="tripoli">Tripoli</option>
-//                             <option value="saida">Saida</option>
-//                           </select>
-
-//                           <span className="text-xs">▾</span>
-//                         </div>
-
-//                         {/* BUTTON */}
-//                         <button
-//                       className="
-//                         h-[40px] shrink-0 rounded-[10px] bg-[var(--brand)] px-4 text-[12px] font-bold text-white
-//                         md:w-[50px] md:px-0
-//                         lg:w-[60px]
-//                         xl:w-[70px]
-//                       "
-//                     >
-//                       Search
-//                     </button>
-//                       </div>
-//                     </div>
-//                   </div>
-
-//                   <div className="h-8 md:hidden" />
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* RIGHT SIDE */}
-//           <div className="relative">
-//             <div className="relative -mx-6 bg-[var(--brand)] md:mx-0 md:bg-transparent">
-//               <div className="relative h-[460px] sm:h-[500px] md:h-full">
-//                 <div className="absolute inset-0 md:hidden bg-[var(--brand)] rounded-bl-[90px]" />
-
-//                 <div className="relative h-full">
-//                   <div className="absolute left-[38px] top-[40px] md:left-[80px] md:top-[70px] grid h-16 w-16 -rotate-6 place-items-center rounded-2xl bg-white shadow-sm">
-//                     <Image src="/images/tile-search.png" alt="" width={34} height={34} />
-//                   </div>
-
-//                   <div className="absolute right-[38px] top-[70px] md:right-[90px] md:top-[95px] grid h-16 w-16 rotate-6 place-items-center rounded-2xl bg-white shadow-sm">
-//                     <Image src="/images/tile-chart.png" alt="" width={34} height={34} />
-//                   </div>
-
-//                   <div className="absolute left-[38px] top-[250px] md:left-[85px] md:top-[320px] grid h-16 w-16 -rotate-3 place-items-center rounded-2xl bg-white shadow-sm">
-//                     <Image src="/images/tile-shield.png" alt="" width={34} height={34} />
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[var(--left)] md:bg-[var(--left)]">
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block w-[44%] bg-[var(--brand)] rounded-bl-[50px]" />
-
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="w-full overflow-hidden bg-[var(--left)] md:bg-[linear-gradient(to_right,var(--left)_56%,var(--brand)_56%)]">
+      <div className="container mx-auto px-6 md:px-8 lg:px-10 xl:px-12">
         <div className="grid min-h-[460px] w-full md:min-h-[580px] md:grid-cols-[56%_44%]">
-          <div className="relative">
-            <div className="h-full">
+          <div className="bg-[var(--left)]">
+            <div className="relative h-full">
               <div className="flex h-full flex-col justify-center pb-10 pt-10 md:pb-24 md:pt-20">
                 <div className="w-full max-w-[760px] text-center md:max-w-none md:pr-20 md:text-left">
                   <h1 className="text-2xl font-extrabold text-[var(--text)] sm:text-3xl md:text-[25px] lg:text-[40px] xl:text-[50px]">
@@ -162,6 +18,7 @@ export default function Hero() {
                     orci euismod vestibulum vitae ut ex. Quisque ut arcu at lectus tristique auctor
                     sit amet at turpis.
                   </p>
+
                   <div className="mt-8">
                     <div
                       className="
@@ -196,6 +53,7 @@ export default function Hero() {
                             placeholder="Job title or Keyword"
                           />
                         </div>
+
                         <div
                           className="
                             flex h-[40px] min-w-[110px] flex-1 items-center gap-2 rounded-[10px] bg-[#f9f9f9] px-3
@@ -227,6 +85,7 @@ export default function Hero() {
 
                           <span className="text-[10px] md:text-[9px] lg:text-xs">▾</span>
                         </div>
+
                         <button
                           className="
                             h-[36px] shrink-0 rounded-[10px] bg-[var(--brand)] px-3 text-[11px] font-bold text-white
@@ -246,24 +105,18 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="relative -mx-6 bg-[var(--brand)] md:mx-0 md:bg-transparent">
-              <div className="relative h-[460px] sm:h-[500px] md:h-full">
-                <div className="absolute inset-0 md:hidden bg-[var(--brand)] rounded-bl-[90px]" />
+          <div className="bg-[var(--brand)]">
+            <div className="relative h-[460px] overflow-hidden rounded-bl-[90px] sm:h-[500px] md:h-full md:min-h-[580px] md:rounded-bl-[50px]">
+              <div className="absolute left-[28%] top-[18%] grid h-14 w-14 -rotate-6 place-items-center rounded-2xl bg-white shadow-sm md:h-16 md:w-16">
+                <Image src="/images/tile-search.png" alt="" width={34} height={34} />
+              </div>
 
-                <div className="relative h-full">
-                  <div className="absolute left-[38px] top-[40px] md:left-[52px] md:top-[70px] lg:left-[80px] lg:top-[70px] grid h-16 w-16 -rotate-6 place-items-center rounded-2xl bg-white shadow-sm">
-                    <Image src="/images/tile-search.png" alt="" width={34} height={34} />
-                  </div>
+              <div className="absolute right-[24%] top-[26%] grid h-14 w-14 rotate-6 place-items-center rounded-2xl bg-white shadow-sm md:h-16 md:w-16">
+                <Image src="/images/tile-chart.png" alt="" width={34} height={34} />
+              </div>
 
-                  <div className="absolute right-[38px] top-[70px] md:right-[58px] md:top-[108px] lg:right-[90px] lg:top-[95px] grid h-16 w-16 rotate-6 place-items-center rounded-2xl bg-white shadow-sm">
-                    <Image src="/images/tile-chart.png" alt="" width={34} height={34} />
-                  </div>
-
-                  <div className="absolute left-[38px] top-[250px] md:left-[58px] md:top-[320px] lg:left-[85px] lg:top-[320px] grid h-16 w-16 -rotate-3 place-items-center rounded-2xl bg-white shadow-sm">
-                    <Image src="/images/tile-shield.png" alt="" width={34} height={34} />
-                  </div>
-                </div>
+              <div className="absolute left-[30%] top-[60%] grid h-14 w-14 -rotate-3 place-items-center rounded-2xl bg-white shadow-sm md:h-16 md:w-16">
+                <Image src="/images/tile-shield.png" alt="" width={34} height={34} />
               </div>
             </div>
           </div>
