@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="w-full overflow-hidden">
+    <section className="w-full overflow-hidden ">
       <div className="container mx-auto px-6 md:px-8 lg:px-10 xl:px-12">
         <div className="grid min-h-[460px] w-full md:min-h-[580px] md:grid-cols-[56%_44%]">
           <div className="bg-[var(--left)]">
@@ -105,8 +105,8 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="bg-[var(--brand)]">
-            <div className="relative h-[460px] overflow-hidden rounded-bl-[90px] sm:h-[500px] md:h-full md:min-h-[580px] md:rounded-bl-[50px]">
+          <div className="bg-[var(--brand)] md:rounded-bl-[50px]">
+            <div className="relative h-[460px] overflow-hidden rounded-bl-[90px] sm:h-[500px] md:h-full md:min-h-[580px] ">
               <div className="absolute left-[28%] top-[18%] grid h-14 w-14 -rotate-6 place-items-center rounded-2xl bg-white shadow-sm md:h-16 md:w-16">
                 <Image src="/images/tile-search.png" alt="" width={34} height={34} />
               </div>
@@ -125,3 +125,4 @@ export default function Hero() {
     </section>
   );
 }
+

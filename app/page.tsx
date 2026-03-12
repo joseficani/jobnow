@@ -10,8 +10,7 @@ import Footer from "@/components/Footer";
 export default function HomePage() {
   return (
     <main className="w-full">
-      <section className="relative w-full overflow-hidden bg-[var(--left)]">
-        <div className="pointer-events-none absolute inset-0 hidden md:block bg-[linear-gradient(to_right,var(--left)_54%,var(--brand)_54%)]" />
+      <section className="relative w-full overflow-hidden bg-[var(--left)] md:block bg-[linear-gradient(to_right,var(--left)_54%,var(--brand)_63%)]">
         <Navbar />
         <Hero />
       </section>

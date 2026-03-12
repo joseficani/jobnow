@@ -23,9 +23,9 @@ export default function Navbar() {
 
   return (
     <header className="w-full overflow-hidden">
-      <div className="container mx-auto px-6 py-5 md:px-8 lg:px-10 xl:px-12">
+      <div className="container mx-auto px-6 md:px-8 lg:px-10 xl:px-12">
         <div className="hidden items-center md:grid md:grid-cols-[56%_44%]">
-          <div className="flex min-w-0 items-center bg-[var(--left)]">
+          <div className="flex min-w-0 items-center bg-[var(--left)]  py-5 ">
             <div className="shrink-0 text-[30px] font-extrabold leading-none tracking-tight text-[var(--text)] lg:text-[32px] xl:text-3xl">
               Job
               <span className="inline-flex items-baseline text-[var(--brand)]">
@@ -61,7 +61,7 @@ export default function Navbar() {
           </div>
 
           {/* RIGHT PART */}
-          <div className="flex min-w-0 items-center justify-end gap-3 bg-[var(--brand)] rounded-bl-[28px] pl-3 md:gap-4 lg:gap-6 lg:pl-4 xl:gap-8">
+          <div className="flex min-w-0 items-center justify-end gap-3 bg-[var(--brand)]  md:gap-4 lg:gap-6  xl:gap-8 py-5 ">
             <a
               href="#"
               className={`shrink-0 font-bold whitespace-nowrap md:text-[12px] lg:text-[15px] xl:text-base ${navLinkWhiteClass}`}
